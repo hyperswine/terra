@@ -8,7 +8,6 @@ export default Index: () -> Component {
 
     @arcen Flex[dir=Col] {
         Menu
-
         workspaces.map(w => @arcen MaxBox[...w])
     }
 }
@@ -40,7 +39,6 @@ Workspace: () -> Component {
 
     @arcen Flex {
         // stuff like the scene, current camera angle, position, etc
-
         // inside the workspace (when it is foregrounded), listen to a specific set of inputs
     }
 }
@@ -54,20 +52,29 @@ Camera: {
     right: Coord3D
 }
 
-impl Camera: Arcen::State {
+Camera: impl Arcen::State {
     // at least one overload required
     set_state: (&mut self, inputs: &[Input]) {
         inputs.for_each(i => {
+            // ! prob gonna be more complex, need a reducer?
             match i {
-                // W => self.position.push(Foward)
-                // A => self.position.push(Foward)
-                // S => self.position.push(Foward)
-                // D => self.position.push(Foward)
+                W => self.position.push(Foward)
+                A => self.position.push(Left)
+                S => self.position.push(Right)
+                D => self.position.push(Backward)
                 // basically, mouse clicks and drags
                 // and the same kind of keys like S, R, G
-
-                // ! prob gonna be more complex, need a reducer?
-                G => self.position()
+                ClickLMB => ()
+                ClickRMB => ()
+                HoldLMB => ()
+                HoldRMB => ()
+                ReleaseLMB => ()
+                ReleaseRMB => ()
+                // mice movement
+                MoveLMB => ()
+                MoveRMB => ()
+                // other keys
+                G => ()
             }
         })
     }

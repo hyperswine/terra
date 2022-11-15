@@ -7,10 +7,13 @@
 */
 
 use std::ml::[MLModel NeuralNet conv_neural_net]
+use std::graphics::Color
 
 // BTW: instead of word wrap on rein, you can also choose truncate to ... for content
 // then on hover, it'll show it or wrap it in a quick expand
 // might be good for notebooks
+
+// annotations are defined as macros with an @ in front
 
 @derive(Serialize)
 AutoModel: {
