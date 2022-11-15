@@ -1,6 +1,7 @@
 #*
     Blender like 3D fabricator software
 *#
+use pkg::components::Card
 
 export default Index: () -> Component {
     let workspaces, set_workspaces = use_state(Vec[Workspace]())
