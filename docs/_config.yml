@@ -1,0 +1,9 @@
+remote_theme: just-the-docs/just-the-docs
+
+aux_links:
+  "Github":
+    - "//github.com/hyperswine/terra"
+
+footer_content: "Terra Software"
+
+logo: "Terra3d.png"
