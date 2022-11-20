@@ -2,7 +2,7 @@
 
 ![Terra](/docs/Terra.png)
 
-Terra software in Rei. Including Terra3D (Fab + GE), TerraCHEM and TerraENG.
+Terra software in Rei. Including Terra3D (Fab + GE), TerraAnim, TerraCHEM and TerraENG.
 
 ## ECS
 
